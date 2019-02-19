@@ -1,3 +1,11 @@
-<p>
-  quotes works!
-</p>
+<h2>All Quotes</h2>
+
+<ul class="quotes">
+  <li *ngFor="let quote of quotes">
+    <a routerLink="/detail/{{quote.id}}">
+      <span class="badge">{{quote.id}}</span> {{quote.title}}
+    </a>
+    <button class="delete" title="delete quote"
+      (click)="delete(quote)">x</button>
+  </li>
+</ul>
